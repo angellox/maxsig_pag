@@ -1,0 +1,245 @@
+:root{
+    --font: 'Rubik', sans-serif;
+    --color-base: #E5E5EA;
+    --color-secundario:#F53756;
+    --color-blanco: #ffff;
+    --color-subbase: #4CBBB3;
+    --color-tribase: #2411ce; 
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: var(--font);
+}
+
+.contenedor{
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.contenedor-nav{
+    position: relative;
+    background-color: var(--color-base);
+    box-shadow: 0px 9px 31px -13px rgba(0,0,0,0.55);
+}
+.nav-menu{
+    display: flex;
+}
+.nav-menu .logo-imagen a img{
+    display: flex;
+    height: 70px;
+    width: 80px;
+    justify-content: center;
+    margin: 0 1rem;
+    transition: all 0.2s ease;
+}
+.nav-menu .logo-imagen a img:hover{
+    filter: drop-shadow(0 0 0.25rem var(--color-tribase));
+}
+.nav-menu .nav-elements{
+    margin: auto 1rem auto auto;
+}
+.nav-menu .nav-element {
+    color: black;
+    text-decoration: none;
+    padding: 1.5rem;
+    display: inline-block;
+    transition: all 0.15s ease-in;
+    border-radius: 0.3rem;
+}
+
+.nav-menu .nav-element:hover{
+    color: var(--color-blanco);
+    background-color: var(--color-subbase); 
+}
+.nav-menu .nav-element:active{
+    background-color: var(--color-tribase); 
+}
+.portada{
+    margin-top: 5rem;
+    background-image: url(/image/portada.jpg);
+    height: 20rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    transition: background-size 500ms ease;
+}
+.portada:hover{
+    background-size: 120%;
+}
+.video {
+    position: relative;
+    max-height: 30rem;
+    overflow: hidden;
+}
+.video .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#891c1e+0,9e37f2+75,ffffff+100&0.8+0,0.5+100 */
+    background: -moz-linear-gradient(-45deg, rgba(137, 28, 30, 0.8) 0%, rgba(158, 55, 242, 0.57) 75%, rgba(255, 255, 255, 0.5) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(137, 28, 30, 0.8) 0%, rgba(158, 55, 242, 0.57) 75%, rgba(255, 255, 255, 0.5) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(137, 28, 30, 0.8) 0%, rgba(158, 55, 242, 0.57) 75%, rgba(255, 255, 255, 0.5) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#cc891c1e", endColorstr="#80ffffff",GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
+}
+.video video {
+    display: block;
+    width: 100%;
+}
+.contenido-video {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+.contenido-video h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #FFF;
+    font-size: 3rem;
+}
+.contenido-video h2 span {
+    background-color: var(--color-secundario);
+    font-size: 1rem;
+    padding: 1rem 2rem;
+}
+.info-promo{
+    background-color: var(--color-subbase);
+    border-radius: 0.5rem;
+}
+.info-promo p{
+    color: var(--color-blanco);
+    margin: 3rem;
+    text-align: center;
+    padding: 3rem;
+    font-size: 25px;
+}
+.info-promo .info-promo-pcolor{
+    background-color: var(--color-secundario);
+    border-radius: 0.5rem;
+}
+.info-promo-p .p-mini{
+    font-size: 14px;
+}
+
+/*INFORMACIÓN DE LOS PRODUCTOS*/
+.informacion-productos{
+}
+.informacion-columna{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: -8rem;
+    border-bottom: 0.2rem solid var(--color-base);
+}
+
+.informacion-columna .imagen-columna img{    
+    transform: scale(0.6);
+    border-radius: 4rem;
+}
+.informacion-columna .info-columna{    
+    display: flex;
+    align-items: center;
+}
+.informacion-columna .info-columna ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}  
+.informacion-columna .info-columna ul li{
+    font-size: 22px;
+    margin-top: 1rem;
+}
+.informacion-columna .info-columna ul li:first-child{
+    margin-top: 0;
+}
+
+
+footer {
+    margin-top: 2rem;
+}
+
+.contenedor-footer{
+    background-color: var(--color-base);
+    padding: 1rem;
+}
+.contenedor-footer p{
+    text-align: center;
+}
+.form {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form legend {
+    color: var(--rosa);
+    font-weight: bold;
+}
+
+.form fieldset {
+    padding: 2rem;
+}
+
+.campo-form{
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 768px) {
+    .form{
+        width: 60%;
+    }
+    .campo-form{
+        margin: 1rem 5rem;
+    }
+}
+.campo-form label{
+    margin-bottom: 1rem;
+    color: var(--color-subbase);
+    font-weight: bold;
+}
+
+.campo-form textarea{
+    height: 20rem;
+    border: 0.2rem solid var(--color-secundario);
+    border-radius: 0.4rem;
+    padding: 0.7rem;
+    outline-style: none;
+}
+.campo-form textarea:hover,
+.campo-form textarea:focus{
+    filter: drop-shadow(0 0 0.2rem var(--color-secundario));
+}
+
+.campo-form input {
+    flex: 1;
+    border: 0.2rem solid var(--color-secundario);
+    outline-style: none;
+    border-radius: 0.4rem;
+    padding: 0.7rem;
+}
+.campo-form input:hover,
+.campo-form input:focus{
+    filter: drop-shadow(0 0 0.2rem var(--color-subbase));
+}
+.send-up{
+    margin: 1rem 0;
+    text-align: right;
+}
+.send-up input {
+    color: var(--color-base);
+    border: none;
+    padding: 0.8rem;
+    background-color: var(--color-subbase);
+    transition: all 0.19s ease;
+}
+.send-up input:hover {
+    cursor: pointer;
+    background-color: var(--color-secundario);
+}
