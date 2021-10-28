@@ -12,7 +12,12 @@
     margin: 0;
     font-family: var(--font);
 }
-
+.logotipo img{
+    display: block;
+    margin: 3rem auto;
+    width: 25rem;
+    filter: drop-shadow(0 0 0.15rem black);
+}
 .contenedor{
     width: 95%;
     max-width: 120rem;
@@ -23,16 +28,27 @@
     position: relative;
     background-color: var(--color-base);
     box-shadow: 0px 9px 31px -13px rgba(0,0,0,0.55);
+    z-index: 100;
 }
+@media screen and (min-width: 720px){
+    .contenedor-nav.fijo{
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+}
+
 .nav-menu{
     display: flex;
 }
 .nav-menu .logo-imagen a img{
     display: flex;
-    height: 70px;
-    width: 80px;
+    height: 32px;
+    width: 150px;
     justify-content: center;
-    margin: 0 1rem;
+    align-items: center;
+    margin: .8rem;
+    filter: drop-shadow(0 0 0.15rem var(--color-tribase));
     transition: all 0.2s ease;
 }
 .nav-menu .logo-imagen a img:hover{
@@ -242,4 +258,56 @@ footer {
 .send-up input:hover {
     cursor: pointer;
     background-color: var(--color-secundario);
+}
+
+/*SECCION DE PRODUCTOS*/
+.productos{
+    max-width: 20rem;
+}
+.producto{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+}
+.producto .imagen-producto img{
+    display: block;
+    width: 30rem;
+}
+.producto .datos-producto{
+    width: 30rem;
+    max-width: 25rem;
+    margin-top: 5rem;
+}
+.producto .datos-producto ul{
+    list-style: none;
+}
+.producto .datos-producto ul li{
+    margin-top: 3rem;
+}
+.producto .datos-producto ul li:first-child{
+    margin-top: 0rem;
+}
+
+.btn {
+    background-color: var(--color-subbase);
+    padding: 0.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-blanco);
+    transition: all 0.2s ease-in;
+}
+.btn:hover{
+    background-color: var(--color-tribase);
+}
+.datos-producto .nombre-producto{
+    text-transform: uppercase;
+    font-size: 27px;
+}
+.datos-producto .nombre-producto .nombre-producto-small{
+    font-size: 15px;
+    line-height: 1;
+}
+.datos-producto .precio-producto{
+    font-size: 20px;
+    color: var(--color-secundario);
 }
